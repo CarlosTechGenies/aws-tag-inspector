@@ -144,7 +144,7 @@ def export_tags(page: Page, aws_username: str, region_info: str = "all"):
     print("Done exporting and processing tags.")
 
 def run(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context(locale="python-sync")
     page = context.new_page()
 
