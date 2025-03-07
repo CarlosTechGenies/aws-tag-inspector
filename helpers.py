@@ -61,7 +61,7 @@ def process_aws_tags(input_file: str, output_file: str):
         new_row_df = pd.DataFrame([new_row])
         processed_df = pd.concat([processed_df, new_row_df], ignore_index=True)
 
-    # Guardar el nuevo CSV
+    # Save Csv
     processed_df.to_csv(output_file, index=False)
     print(f"Processed CSV saved to {output_file}")
     print(f"Total records processed: {len(processed_df)}")
